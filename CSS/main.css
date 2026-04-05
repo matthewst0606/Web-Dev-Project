@@ -1,0 +1,181 @@
+body {
+    text-align: center;
+    background-color: #212121;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-weight: bolder;
+    font-size: 11pt;
+
+
+    display: flex;    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    background-color: #303030;
+    box-shadow: 0 0 20px rgb(10, 10, 10);
+    
+
+    width: 100%;
+    padding: 8px;
+    display: flex;    
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+h1 { 
+    font-size: 2em;
+    text-shadow: 0 0 15px rgb(10, 10, 10);
+
+    display: flex;    
+    margin: auto;
+}
+
+#searchbar {
+    width: 60%;
+    height: fit-content;
+    margin: auto;
+    gap: 5px;
+    border-radius: 7px;
+
+    display: flex; 
+    align-items: center;
+    justify-content: center;    
+}
+
+input { color:white; }
+
+#searchbox {
+    width: 75%;
+    padding: 5px;
+
+
+    border: none;
+    border-radius: 7px;
+    background-color: #3C3C3C;
+    font-weight: normal;
+    font-style: italic;
+    
+
+}
+#searchbtn {
+    width: 15%;
+    border: none;
+    padding: 3px;
+
+    border-radius: 7px;
+    background-color: #027AFF;
+    color: white;
+
+
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+
+}
+li {
+    background-color: #424242;
+    font-size: 10pt;
+    list-style: none;
+    border-radius: 10px;
+    width: 100%;
+    
+}
+a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+
+
+
+section {
+    /* layout */
+    width: 90%;
+    background-color: #1b1b1b;
+
+
+    /* visual */
+    box-shadow: 0 0 15px rgb(10, 10, 10);
+    
+
+    /* flexbox */
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#maincontent article {
+   /* layout */
+    width: 95%;
+    padding: 20px;
+    margin: 10px;
+
+    /* visual */
+    background-color: #212121;
+    border-radius: 10px;
+    
+
+    /* flexbox */
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* post photos */
+#interact figure { width: 50%; }
+
+img { border-radius: 10px; }
+
+#interact img {
+    width: 100%;
+    height: fit-content;
+}
+
+figcaption { padding: 10px; }
+
+#interact ul { background-color: #027AFF; }
+
+
+footer {
+    background-color: #303030;
+    width: 100%;
+    height: 5%;
+    margin-top: auto;
+    box-shadow: 0 0 20px rgb(10, 10, 10);
+}
+
+
+button:hover, a:hover { background-color: rgb(118, 118, 118); }
+#searchbtn:hover { box-shadow: 0 0 3px #027AFF; }
