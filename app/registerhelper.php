@@ -13,21 +13,21 @@ if (isset($_POST['register'])) {
     
 
     if (str_contains($username, " ")) {
-        header("Location: ../HTML/register.php");
+        header("Location: ../public/HTML/register.php");
         exit();
     }
     else if (str_contains($email, " ") || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../HTML/register.php");
+        header("Location: ../public/HTML/register.php");
         exit();
     }
     else if (str_contains($password, " ")) {
-        header("Location: ../HTML/register.php");
+        header("Location: ../public/HTML/register.php");
         exit();
     }
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    $stmt = $getConnection->prepare(
+    $stmt = $pdo->prepare(
         "INSERT INTO users (username, email, password) VALUES (?, ?, ?) RETURNING user_id"
     );
 
@@ -38,20 +38,20 @@ if (isset($_POST['register'])) {
 
 
     if ($user) {
-        $profileStmt = $getConnection->prepare(
+        $profileStmt = $pdo->prepare(
             "INSERT INTO userProfile (user_id, bio, pfp) VALUES (?, ?, ?)"
         );
 
         $profileStmt->execute([
             $user['user_id'],
             "no bio yet.",
-            "images/profile-circle-2.svg"
+            "icons/profile-circle-2.svg"
         ]);
 
         $_SESSION['loggedin'] = true;
         $_SESSION['id'] = $user['user_id'];
         $_SESSION['username'] = $username;
-        header("Location: ../HTML/main.php");
+        header("Location: ../public/HTML/main.php");
         exit();
     }
 }

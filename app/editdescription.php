@@ -5,11 +5,11 @@
 session_start();
 
 if (!isset($_SESSION['id'])) {
-    header("Location: ../HTML/login.php");
+    header("Location: ../public/HTML/login.php");
     exit();
 }
 if (!isset($_POST['post_id']) || !isset($_POST['description'])) {
-    header("Location: ../HTML/main.php");
+    header("Location: ../public/HTML/main.php");
     exit();
 }  
 
@@ -24,7 +24,7 @@ $stmt = $pdo->prepare("UPDATE post SET description = ? WHERE post_id = ? AND use
 $stmt->execute([$description, $postId, $userId]);
 
 $_SESSION["return_to_profile"] = true;
-header("Location: ../HTML/main.php");
+header("Location: ../public/HTML/main.php");
 exit();
 
 

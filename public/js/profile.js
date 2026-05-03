@@ -105,7 +105,7 @@ class ProfilePost extends Post {
         // -------------- deletepost option -------------- 
         let deletePost = document.createElement("button");
         let deleteOptions = {
-            formAction: "../php/deletepost.php",
+            formAction: "../../app/deletepost.php",
         };
         deletePost.textContent = "delete post";
         deletePost.classList.add("delete-post-btn");
@@ -117,7 +117,7 @@ class ProfilePost extends Post {
         let editDescription = document.createElement("button");
         let descOptions = {
             formClass: "description-edit-form",
-            formAction: "../php/editdescription.php",
+            formAction: "../../app/editdescription.php",
 
             inputType: "text",
             inputName: "description",

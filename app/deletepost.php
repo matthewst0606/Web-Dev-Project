@@ -5,11 +5,11 @@
 session_start();
 
 if (!isset($_SESSION['id'])) {
-    header("Location: ../HTML/login.php");
+    header("Location: ../public/HTML/login.php");
     exit();
 }
 if (!isset($_POST['post_id'])) {
-    header("Location: ../HTML/main.php");
+    header("Location: ../public/HTML/main.php");
     exit();
 }  
 
@@ -22,7 +22,7 @@ $stmt = $pdo->prepare("DELETE FROM post WHERE post_id = ? AND user_id = ?");
 $stmt->execute([$postId, $userId]);
 
 $_SESSION["return_to_profile"] = true;
-header("Location: ../HTML/main.php");
+header("Location: ../public/HTML/main.php");
 exit();
 
 

@@ -15,7 +15,7 @@ class Settings {
             let form = document.createElement("form");
             form.classList.add("btn-edit-form");
             form.method = "post";
-            form.action = "../php/editSettings.php";
+            form.action = "../../app/editSettings.php";
 
             let input = document.createElement("input");
             input.type = options.type;

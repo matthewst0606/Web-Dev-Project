@@ -13,8 +13,8 @@
         <h1>Post Cards</h1>
         <nav id="topnav">
             <ul class="tabcontainer">
-                <li class="tab"><a href="#" class="btn">about <img src="../images/info-circle-2.svg" alt=""></a></li>
-                <li class="tab"><a href="#" class="btn">help <img src="../images/help-circle-2.svg" alt=""></a></li>
+                <li class="tab"><a href="#" class="btn">about <img src="../icons/info-circle-2.svg" alt=""></a></li>
+                <li class="tab"><a href="#" class="btn">help <img src="../icons/help-circle-2.svg" alt=""></a></li>
             </ul>
         </nav>
     </header>
@@ -22,7 +22,7 @@
 
     <main>
         <section id="maincontent" class="activePage">
-            <form action="../php/registerhelper.php" method="post">
+            <form action="../../app/registerhelper.php" method="post">
                 <section class="form-section">
                     <input type="text" required="" name="username" id="username" placeholder="username" class="form-details">
                     <input type="email" required="" name="email" id="email" placeholder="email" class="form-details">

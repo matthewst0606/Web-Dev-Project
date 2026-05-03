@@ -6,7 +6,7 @@
         exit();
     }
 
-    require_once "../php/mainhelper.php";
+    require_once "../../app/mainhelper.php";
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +47,7 @@
         <nav class="searchbar">
             <input type="text" placeholder="search" class="searchbox">
             <button class="searchbtn">
-                <img src="../images/search-3.svg" alt="search">
+                <img src="../icons/search-3.svg" alt="search">
             </button>
         </nav>
     </header>
@@ -84,7 +84,7 @@
                 <h2 class="title">Upload</h2>
                 
                 <!-- form for uploading a post -->
-                <form action="../php/upload.php" method="post" enctype="multipart/form-data">
+                <form action="../../app/upload.php" method="post" enctype="multipart/form-data">
 
                     <!-- for uploading images & adding description to post -->
                     <input type="file" id="uploadFile" name="uploadFile">
@@ -118,7 +118,7 @@
                     
                     <!-- pfp, username, & bio -->
                     <img id="pfp" 
-                         src="<?php echo htmlspecialchars('../' . ($userProfile['pfp'] ?? 'images/profile-circle-2.svg')); ?>" 
+                         src="<?php echo htmlspecialchars('../' . ($userProfile['pfp'] ?? 'icons/profile-circle-2.svg')); ?>" 
                          alt="pfp"
                     >
                     <p id="username">

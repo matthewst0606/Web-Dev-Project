@@ -29,7 +29,7 @@ function displayMainPosts() {
 
         for (let j = 0; j < postComments.length; j++) {
             let comment = new Comment(
-                "../images/profile-circle-2.svg",
+                "../icons/profile-circle-2.svg",
                 postComments[j].username,
                 postComments[j].content
             );

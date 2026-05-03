@@ -7,7 +7,7 @@ if (!isset($_FILES["uploadFile"]))
 else if ($_FILES["uploadFile"]["error"] !== UPLOAD_ERR_OK) 
     exit("Upload failed with error code: " . $_FILES["uploadFile"]["error"]);
 
-$uploadDir = __DIR__ . "/../uploads/"; // Sets the upload folder path
+$uploadDir = __DIR__ . "/../public/uploads/"; // Sets the upload folder path
 $fileName = basename($_FILES["uploadFile"]["name"]); // Gets the original file name safely
 $destination = $uploadDir . $fileName; // Creates the full destination path for the uploaded file
 
@@ -50,7 +50,7 @@ $stmt = $pdo->prepare("
 $stmt->execute([$userId, $format, $content, $description]);
 
 // Sends  user back to the main page
-header("Location: ../HTML/main.php");
+header("Location: ../public/HTML/main.php");
 exit();
 ?>
 

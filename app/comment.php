@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['id'])) {
-    header("Location: ../HTML/login.php");
+    header("Location: ../public/HTML/login.php");
     exit();
 }
 
@@ -10,7 +10,7 @@ $postId = $_POST['post_id'] ?? null;
 $commentText = $_POST['comment_text'] ?? "";
 
 if (!$postId || trim($commentText) === "") {
-    header("Location: ../HTML/main.php");
+    header("Location: ../public/HTML/main.php");
     exit();
 }
 
@@ -27,6 +27,6 @@ $stmt->execute([
     $commentText
 ]);
 
-header("Location: ../HTML/main.php");
+header("Location: ../public/HTML/main.php");
 exit();
 ?>

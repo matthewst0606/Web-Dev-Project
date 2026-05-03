@@ -7,11 +7,10 @@
 
 .env
 
-images/
-uploads/
+public/uploads/
 other/
 
 fiveserver.config.js
 
-php/db_connect.php
+app/db_connect.php
 compose.yaml

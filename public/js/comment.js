@@ -65,7 +65,7 @@ class CommentForm {
 
         let form = document.createElement("form");
         form.classList.add("comment-form", "hidden");
-        form.action = "../php/comment.php";
+        form.action = "../../app/comment.php";
         form.method = "post";
 
         let postIdInput = document.createElement("input");

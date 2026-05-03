@@ -25,8 +25,8 @@ if (isset($_GET["error"])) {
         <h1>social media</h1>
         <nav id="topnav">
             <ul class="tabcontainer">
-                <li class="tab"><a href="#" class="btn">about <img src="../images/info-circle-2.svg" alt=""></a></li>
-                <li  class="tab"><a href="#" class="btn">help <img src="../images/help-circle-2.svg" alt=""></a></li>
+                <li class="tab"><a href="#" class="btn">about <img src="../icons/info-circle-2.svg" alt=""></a></li>
+                <li  class="tab"><a href="#" class="btn">help <img src="../icons/help-circle-2.svg" alt=""></a></li>
             </ul>
         </nav>
     </header>
@@ -40,7 +40,7 @@ if (isset($_GET["error"])) {
                     <p class="error-message"><?php echo $errorMessage; ?></p>
                 <?php endif; ?>
 
-                <form action="../php/loginhelper.php" method="post">
+                <form action="../../app/loginhelper.php" method="post">
                     <section class="form-section">
                         <!-- enter username -->
                         <input type="text" required="" 
